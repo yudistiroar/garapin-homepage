@@ -545,7 +545,12 @@ The interface uses one-pixel borders.
 - Hover border: `#c9c9c4`
 - Sticky header border: `rgba(230, 230, 226, 0.9)`
 
-There are no shadows in the current design. Depth comes from contrast, tonal surfaces, borders, scale, and spacing.
+The current design uses two restrained shadow tokens:
+
+- Card shadow: `0 18px 50px rgba(17, 17, 17, 0.055)`
+- Panel shadow: `0 30px 90px rgba(17, 17, 17, 0.075)`
+
+Shadows support hierarchy without becoming visible decoration. Do not increase their contrast casually.
 
 The current visual system uses restrained monochrome radial gradients in the hero, featured portfolio media, and final CTA. Gradients must remain subtle, grayscale, and functional. Do not introduce colorful gradients without explicit approval.
 
@@ -575,7 +580,7 @@ Future WhatsApp actions must use the approved contact URL and approved CTA label
 
 ## Hero
 
-Contains an eyebrow, the primary page heading, supporting text, and two actions. Its purpose is to explain the current offer and provide the first navigation choices.
+Contains an eyebrow, the primary page heading, a large atmospheric visual using the official Garapin mark, supporting text, and two actions. The visual uses concentric monochrome surfaces and becomes an in-flow panel on mobile. Its purpose is to explain the current offer and provide the first navigation choices.
 
 ## Section Heading
 
@@ -605,7 +610,7 @@ A centered high-emphasis closing panel with a restrained monochrome radial surfa
 
 ## Footer
 
-A restrained three-part footer containing the official mark, external/contact links, and copyright. It reorganizes into two columns with a separate copyright row on mobile.
+A light, restrained three-part footer containing the official mark, external/contact links, and copyright. Reduced visual emphasis keeps it subordinate to the final CTA. It reorganizes into two columns with a separate copyright row on mobile.
 
 ## Components Not Present
 
@@ -787,7 +792,7 @@ The website must remain premium, editorial, calm, modern, professional, human, a
 
 Preserve whitespace, typography hierarchy, restraint, thin borders, minimal icons, restrained radii, and subtle motion.
 
-Do not add gradients, glassmorphism, neon, visual clutter, decorative graphics, oversized icons, arbitrary floating elements, or animation for its own sake.
+Do not add bright or colorful gradients, glassmorphism, neon, visual clutter, arbitrary floating elements, or animation for its own sake. Restrained monochrome gradients and shadows may be used when they create a clear focal point or improve section hierarchy.
 
 ## Brand Assets
 
