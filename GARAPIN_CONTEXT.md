@@ -306,7 +306,7 @@ https://wa.me/6285128011920
 
 Default CTA
 
-Mulai dari 1 Video
+Konsultasi di WhatsApp
 
 Alternative CTA
 
@@ -731,7 +731,7 @@ https://wa.me/6285128011920
 
 The default CTA is:
 
-Mulai dari 1 Video
+Konsultasi di WhatsApp
 
 Approved alternatives are limited to those listed in the Contact section unless new copy is explicitly approved.
 

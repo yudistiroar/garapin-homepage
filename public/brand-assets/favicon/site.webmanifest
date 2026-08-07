@@ -1,6 +1,7 @@
 {
   "name": "Garapin Digital",
   "short_name": "Garapin",
+  "lang": "id",
   "icons": [
     {
       "src": "android-chrome-192.png",
