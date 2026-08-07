@@ -16,6 +16,6 @@ export default defineConfig({
   base: "/",
   plugins: [sitesWorker],
   build: {
-    outDir: "dist",
+    outDir: "dist/client",
   },
 });
