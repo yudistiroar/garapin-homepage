@@ -516,6 +516,7 @@ There is no formal numbered spacing scale. Use the existing values and responsiv
 Core layout tokens:
 
 - Maximum container width: `1180px`
+- Maximum visual panel width: `1280px`
 - Horizontal gutter: `clamp(20px, 4vw, 48px)`
 - Section spacing: `clamp(96px, 10vw, 152px)`
 - Desktop navigation height: `76px`
@@ -530,6 +531,7 @@ Hero, contact, headings, cards, footer, and responsive layouts use additional co
 ## Border Radius
 
 - Shared card radius: `16px`
+- Large section panel radius: `28px`
 - Buttons: `999px` pill radius
 - Client monograms: `50%` circle
 - Skip link: `10px`
@@ -543,7 +545,9 @@ The interface uses one-pixel borders.
 - Hover border: `#c9c9c4`
 - Sticky header border: `rgba(230, 230, 226, 0.9)`
 
-There are no shadows in the current design. Do not introduce shadows unless explicitly requested.
+There are no shadows in the current design. Depth comes from contrast, tonal surfaces, borders, scale, and spacing.
+
+The current visual system uses restrained monochrome radial gradients in the hero, featured portfolio media, and final CTA. Gradients must remain subtle, grayscale, and functional. Do not introduce colorful gradients without explicit approval.
 
 ---
 
@@ -579,13 +583,13 @@ The `.section-heading` pattern provides a consistent compact label and separatio
 
 ## Service Cards
 
-The two-card services grid presents Garapin Editing as one available service within Garapin and Garapin Branding as a muted, coming-soon service. Cards share structure, padding, border, radius, footer alignment, and restrained hover behavior.
+The two-card services grid presents Garapin Editing as one available service within Garapin and Garapin Branding as a muted, coming-soon service. The active service uses a dark high-contrast surface and receives greater scale; the future service uses a quieter light surface. Cards share structure, padding, border, radius, footer alignment, and restrained hover behavior.
 
 Future services should follow the same `Garapin + service category` naming architecture so Garapin Editing, Garapin Web, Garapin AI, Garapin Design, and other approved offers can be added without repositioning the entire company.
 
 ## Portfolio Showcase
 
-The `Sudah Kami Garapin` section presents eleven real client projects. Gobind Vashdev, TREPLUS, Buteyko Indonesia, and Singing Bowl Indonesia receive larger featured cards with verified client visuals, category and work context, a concise project description, and a clear project link.
+The `Sudah Kami Garapin` section sits within a soft bordered panel and presents eleven real client projects. Gobind Vashdev, TREPLUS, Buteyko Indonesia, and Singing Bowl Indonesia receive larger asymmetrical featured cards with verified client visuals, category and work context, a concise project description, and a clear project link.
 
 The remaining seven clients use smaller cards with the same essential proof: a real identity image, client name, category, concise description, and project link.
 
@@ -593,11 +597,11 @@ Each card links to the client's Instagram page. The section does not embed Insta
 
 ## About
 
-A two-column editorial pattern pairing a compact section title with a constrained large-text statement. It becomes one column below the tablet breakpoint.
+A dark editorial panel pairing a compact section title with a constrained large-text statement. It uses two columns on desktop and becomes one column below the tablet breakpoint.
 
 ## Contact
 
-A centered high-emphasis closing section with an eyebrow, oversized headline, and primary action. The current HTML uses an email action; future contact implementation must use the approved WhatsApp URL unless explicitly directed otherwise.
+A centered high-emphasis closing panel with a restrained monochrome radial surface, eyebrow, oversized headline, and primary WhatsApp action.
 
 ## Footer
 
