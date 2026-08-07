@@ -2,7 +2,7 @@
 
 ## Mission
 
-Garapin helps founders, coaches, trainers, doctors, educators, consultants and personal brands turn ordinary talking-head recordings into professional short-form videos that are easier to follow, more convincing, and ready to publish.
+Garapin helps businesses and personal brands communicate their ideas more clearly through thoughtful digital services and products.
 
 Our mission is simple:
 
@@ -12,13 +12,22 @@ Our mission is simple:
 
 # What Garapin Is
 
-Garapin is NOT a creative agency.
+Garapin is a digital communication studio.
 
-Garapin is NOT a branding agency.
+Garapin helps businesses and personal brands communicate ideas more clearly.
 
-Garapin is NOT a social media agency.
+Video editing is one Garapin service. It is not Garapin's identity.
 
-Garapin is a premium talking-head video editing service.
+The service architecture is designed to support future additions such as:
+
+- Garapin Editing
+- Garapin Web
+- Garapin AI
+- Garapin Design
+- Garapin Branding
+- Garapin digital products
+
+Do not present unlaunched services as currently available.
 
 ---
 
@@ -551,7 +560,9 @@ The `.section-heading` pattern provides a consistent compact label and separatio
 
 ## Service Cards
 
-The two-card services grid distinguishes the available EDITIN offer from the muted, coming-soon BRANDINGIN entry. Cards share structure, padding, border, radius, footer alignment, and restrained hover behavior.
+The two-card services grid presents Garapin Editing as one available service within Garapin and Garapin Branding as a muted, coming-soon service. Cards share structure, padding, border, radius, footer alignment, and restrained hover behavior.
+
+Future services should follow the same `Garapin + service category` naming architecture so Garapin Editing, Garapin Web, Garapin AI, Garapin Design, and other approved offers can be added without repositioning the entire company.
 
 ## Client Directory Cards
 
@@ -590,7 +601,7 @@ Current interactions:
 - Navigation and footer links transition their text color.
 - Primary and secondary buttons transition color, background, border, and transform; hover moves them upward by `1px`.
 - Service cards transition border color and transform; hover moves them upward by `3px`.
-- The EDITIN service arrow moves `4px` to the right on card hover.
+- The active service arrow moves `4px` to the right on card hover.
 - Client cards transition border and background color.
 - Client arrows move `2px` right and `2px` up while changing color on card hover.
 - The skip link transitions vertically into view when focused.
@@ -709,9 +720,13 @@ Do not merely scale desktop layouts. Preserve clear headline wrapping, comfortab
 
 ## Brand Philosophy
 
-Garapin is a premium talking-head video editing service, not a creative, branding, or social media agency.
+Garapin is a digital communication studio for businesses and personal brands.
 
-Clarity beats decoration. Editing and interface design should support the message without calling attention to themselves.
+Garapin Editing is one service inside Garapin. Never position video editing as the company's complete identity.
+
+The brand architecture must remain broad enough for approved future services, including web development, AI automation, design, branding, and digital products.
+
+Clarity beats decoration. Every service and interface decision should support the message without calling attention to itself.
 
 ## Approved Copy
 
