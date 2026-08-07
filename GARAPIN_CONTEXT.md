@@ -399,7 +399,7 @@ The repository must be built before deployment. Cloudflare must publish `dist/`,
 - `README.md` — inherited starter documentation that does not describe the current implementation accurately
 - `GARAPIN_CONTEXT.md` — permanent product, brand, design, and engineering source of truth
 
-`public/assets/`, `outputs/`, and `work/site-stage/` currently contain no source files used by the website.
+`public/assets/portfolio/` contains locally stored, publicly sourced client identity images used by the portfolio showcase. `outputs/` and `work/site-stage/` currently contain no source files used by the website.
 
 ---
 
@@ -448,6 +448,24 @@ The HTML references the ICO, 16px, 32px, Apple touch icon, and manifest. The man
 - Production URL: `/brand-assets/open-graph/og-image-1200x630.png`
 
 No other logo variants, photographs, portfolio thumbnails, videos, or brand fonts currently exist in `public/brand-assets/`.
+
+## Portfolio Visuals
+
+Verified public client profile visuals used by the portfolio showcase live in `public/assets/portfolio/`:
+
+- `gobind-vashdev.jpg`
+- `treplus.jpg`
+- `buteyko-indonesia.jpg`
+- `singing-bowl-indonesia.jpg`
+- `bali-better-breathing.jpg`
+- `ssbr-trans.jpg`
+- `qasir.jpg`
+- `myslice-pizza.jpg`
+- `amstirdam-coffee.jpg`
+- `warung-wareg.jpg`
+- `bina-kids-ai.jpg`
+
+These images are client identity references, not invented project thumbnails. Keep them local so the portfolio does not depend on expiring Instagram CDN URLs.
 
 ---
 
@@ -503,7 +521,8 @@ Core layout tokens:
 - Desktop navigation height: `76px`
 - Mobile navigation height: `68px`
 - Services grid gap: `16px`
-- Client directory grid gap: `12px`
+- Featured portfolio grid gap: `16px`
+- Compact portfolio grid gap: `12px`
 - Button group gap: `10px`
 
 Hero, contact, headings, cards, footer, and responsive layouts use additional contextual spacing declared directly in `style.css`. Preserve those relationships when changing a component.
@@ -564,11 +583,13 @@ The two-card services grid presents Garapin Editing as one available service wit
 
 Future services should follow the same `Garapin + service category` naming architecture so Garapin Editing, Garapin Web, Garapin AI, Garapin Design, and other approved offers can be added without repositioning the entire company.
 
-## Client Directory Cards
+## Portfolio Showcase
 
-The `Sudah Kami Garapin` section is currently a two-column directory of eleven external Instagram links. Each full card is clickable and contains a circular monogram, client name, category, and outbound arrow.
+The `Sudah Kami Garapin` section presents eleven real client projects. Gobind Vashdev, TREPLUS, Buteyko Indonesia, and Singing Bowl Indonesia receive larger featured cards with verified client visuals, category and work context, a concise project description, and a clear project link.
 
-These cards are proof of existing client relationships. They are not Instagram embeds and do not display followers or Instagram interface elements.
+The remaining seven clients use smaller cards with the same essential proof: a real identity image, client name, category, concise description, and project link.
+
+Each card links to the client's Instagram page. The section does not embed Instagram, display follower counts, invent results, or use monograms.
 
 ## About
 
@@ -634,7 +655,7 @@ The stylesheet is desktop-first and uses breakpoints at `900px`, `720px`, and `4
 ## Desktop — Above 900px
 
 - Content is constrained to `1180px` with responsive gutters.
-- Services and client directory use two-column grids.
+- Services, featured portfolio, and compact portfolio use two-column grids.
 - About uses a narrow title column and wider statement column.
 - Hero supporting copy and actions sit on opposite sides.
 - Footer uses three columns.
@@ -650,7 +671,7 @@ The stylesheet is desktop-first and uses breakpoints at `900px`, `720px`, and `4
 - Navigation height and wordmark width reduce.
 - Hero spacing and typography reduce intentionally.
 - Hero supporting content stacks vertically and aligns left.
-- Services and client directory become single-column lists.
+- Services, featured portfolio, and compact portfolio become single-column lists.
 - Sections use `96px` vertical padding.
 - Footer becomes a two-column layout with copyright on a new full-width row.
 - Scroll padding changes to match the shorter sticky navigation.
