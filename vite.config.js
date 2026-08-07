@@ -13,6 +13,7 @@ const sitesWorker = {
 };
 
 export default defineConfig({
+  base: "/",
   plugins: [sitesWorker],
   build: {
     outDir: "dist",
