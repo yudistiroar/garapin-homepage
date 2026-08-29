@@ -36,7 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-/dist/
+/dist/*
+!/dist/client/
+!/dist/client/**
 /.wrangler/
 /outputs/
 /work/
