@@ -849,3 +849,29 @@ html, body { max-width: 100%; overflow-x: clip; }
   .proof-strip > div { border-right: 0; border-bottom: 1px solid var(--line); }
   .proof-strip > div:last-child { border-bottom: 0; }
 }
+
+/* Portfolio disclosure: show top four, reveal the remaining eight */
+#work > .portfolio-grid > .project-card { display: none; }
+#work > .portfolio-grid > .project-card[href*="gobindvashdev"],
+#work > .portfolio-grid > .project-card[href*="buteykoindonesia"],
+#work > .portfolio-grid > .project-card[href*="amstirdamcoffee"],
+#work > .portfolio-grid > .project-card[href*="qasir.id"] { display: flex; }
+#work .portfolio-archive { margin-top: 24px; display: block; }
+#work .portfolio-archive summary {
+  min-height: 64px;
+  padding: 18px 0;
+  border-block: 1px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 650;
+}
+#work .portfolio-archive summary::-webkit-details-marker { display: none; }
+#work .portfolio-archive summary span { transition: transform 220ms var(--ease-editorial); }
+#work .portfolio-archive[open] summary span { transform: rotate(180deg); }
+#work .portfolio-grid-extra { margin-top: 14px; }
+#work .portfolio-grid-extra > .project-card[href*="qasir.id"],
+#work .portfolio-grid-extra > .project-card[href*="amstirdamcoffee"] { display: none; }
