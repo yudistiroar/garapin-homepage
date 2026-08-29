@@ -82,6 +82,13 @@
         </div>
       </section>
 
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>VIDEO EDITING</span><span>CONTENT PRODUCTION</span><span>PERSONAL BRAND</span><span>SOCIAL MEDIA</span>
+          <span>VIDEO EDITING</span><span>CONTENT PRODUCTION</span><span>PERSONAL BRAND</span><span>SOCIAL MEDIA</span>
+        </div>
+      </div>
+
       <section class="section container" id="services" aria-labelledby="services-title">
         <div class="section-heading">
           <h2 id="services-title">Layanan Kami</h2>
@@ -348,6 +355,7 @@
       </section>
 
       <section class="contact container" id="contact" aria-labelledby="contact-title">
+        <img class="contact-mark" src="/brand-assets/mark/mark-black.svg" alt="" width="360" height="342" loading="lazy" aria-hidden="true" />
         <p class="eyebrow">PUNYA KEBUTUHAN KONTEN?</p>
         <h2 id="contact-title">Kami siap garapin.</h2>
         <p class="contact-copy">Ceritakan kebutuhan dan target Anda. Kami siap membantu membuat konten yang sesuai untuk brand Anda.</p>
@@ -367,6 +375,49 @@
         <p>© 2026 Garapin</p>
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const root = document.documentElement;
+        root.classList.add('js');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const revealItems = document.querySelectorAll(
+          '.section-heading, .portfolio-heading > p, .service-card, .project-card, .proof-strip > div, .about-lead, .about-process li, .team-heading > p, .team-member, .contact > :not(.contact-mark)'
+        );
+
+        if (!reducedMotion && 'IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+          revealItems.forEach((item) => observer.observe(item));
+        } else {
+          revealItems.forEach((item) => item.classList.add('is-visible'));
+        }
+
+        if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
+          const hero = document.querySelector('.hero');
+          hero?.addEventListener('pointermove', (event) => {
+            const box = hero.getBoundingClientRect();
+            hero.style.setProperty('--pointer-x', `${(event.clientX - box.left) / box.width - 0.5}`);
+            hero.style.setProperty('--pointer-y', `${(event.clientY - box.top) / box.height - 0.5}`);
+          });
+
+          document.querySelectorAll('.service-card, .project-card, .contact').forEach((card) => {
+            card.addEventListener('pointermove', (event) => {
+              const box = card.getBoundingClientRect();
+              card.style.setProperty('--mx', `${event.clientX - box.left}px`);
+              card.style.setProperty('--my', `${event.clientY - box.top}px`);
+            });
+          });
+        }
+      })();
+    </script>
 
   </body>
 </html>

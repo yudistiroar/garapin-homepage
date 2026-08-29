@@ -278,6 +278,183 @@ body { background: var(--paper); }
   .team-arrow { grid-column: 3; grid-row: 1 / span 2; }
 }
 
+/* Premium motion system */
+.marquee {
+  width: 100%;
+  margin-top: clamp(38px, 5vw, 72px);
+  padding-block: 17px;
+  border-block: 1px solid var(--line);
+  overflow: hidden;
+}
+.marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  animation: marquee-slide 28s linear infinite;
+}
+.marquee-track span {
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+.marquee-track span::after {
+  width: 5px;
+  height: 5px;
+  margin-inline: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  content: "";
+}
+@keyframes marquee-slide { to { transform: translateX(-50%); } }
+
+@media (min-width: 761px) {
+  #services { padding-top: clamp(100px, 12vw, 170px); }
+  .team { padding-top: clamp(108px, 13vw, 180px); }
+  .contact { padding-top: clamp(105px, 12vw, 175px); }
+
+  .hero-visual {
+    transform: translate(calc(var(--pointer-x, 0) * 18px), calc(var(--pointer-y, 0) * 18px));
+    transition: transform 700ms var(--ease-editorial);
+  }
+  .hero-visual::before { animation: hero-orbit 18s linear infinite; }
+  .hero-visual::after { animation: hero-orbit 26s linear infinite reverse; }
+  .hero-visual-ring { animation: hero-float 5s ease-in-out infinite; }
+  @keyframes hero-orbit { to { transform: rotate(360deg); } }
+  @keyframes hero-float { 50% { transform: translateY(-7px); } }
+
+  .service-card,
+  #work .project-card,
+  .contact { isolation: isolate; }
+  .service-card::after,
+  #work .project-card::before,
+  .contact::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.13), transparent 45%);
+    content: "";
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  .service-card-muted::after,
+  #work .project-card::before,
+  .contact::after { background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(16,16,15,.08), transparent 48%); }
+  .service-card:hover::after,
+  #work .project-card:hover::before,
+  .contact:hover::after { opacity: 1; }
+  .service-card::before { transition: transform 600ms var(--ease-editorial), opacity 300ms ease; }
+  .service-card:hover::before { transform: translate(-8px, -10px) scale(1.06); }
+  .service-card .arrow,
+  #work .project-card .project-link { transition: transform 240ms var(--ease-editorial); }
+  .service-card:hover .arrow { transform: translateX(7px); }
+  #work .project-card:hover .project-link { transform: translateX(4px); }
+  #work .project-card .project-visual img { transition: transform 500ms var(--ease-editorial), filter 300ms ease; }
+  #work .project-card:hover .project-visual img { transform: scale(1.1); filter: saturate(1.12); }
+  #work .project-card::after { transition: transform 300ms var(--ease-editorial), background 300ms ease; }
+  #work .project-card:hover::after { transform: translateY(-3px); background: #fff; }
+
+  .about-process { position: relative; }
+  .about-process::after {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1200ms var(--ease-editorial) 180ms;
+  }
+  .about:has(.about-process li.is-visible) .about-process::after { transform: scaleX(1); }
+  .team-member:hover .team-photo { transform: scale(1.08); filter: saturate(1.12) contrast(1.02); }
+  .team-member:hover .team-handle { opacity: 1; transform: translateY(0); }
+}
+
+.contact-mark {
+  position: absolute;
+  z-index: -1;
+  right: clamp(50px, 9vw, 150px);
+  top: 50%;
+  width: clamp(210px, 28vw, 430px);
+  height: auto;
+  opacity: .035;
+  transform: translateY(-50%) rotate(-4deg);
+  transition: opacity 500ms ease, transform 800ms var(--ease-editorial);
+}
+.contact:hover .contact-mark { opacity: .065; transform: translateY(-50%) rotate(0deg) scale(1.03); }
+.contact h2 { position: relative; }
+.contact h2::after {
+  position: absolute;
+  right: 0;
+  bottom: -.08em;
+  left: 0;
+  height: .035em;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms var(--ease-editorial) 250ms;
+}
+.contact h2.is-visible::after { transform: scaleX(1); }
+
+.js .section-heading,
+.js .portfolio-heading > p,
+.js .service-card,
+.js .project-card,
+.js .proof-strip > div,
+.js .about-lead,
+.js .about-process li,
+.js .team-heading > p,
+.js .team-member,
+.js .contact > :not(.contact-mark) {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 650ms ease, transform 700ms var(--ease-editorial);
+}
+.js .is-visible { opacity: 1; transform: translateY(0); }
+.js .services-grid .service-card:nth-child(2),
+.js .proof-strip > div:nth-child(2),
+.js .about-process li:nth-child(2),
+.js .team-member:nth-child(2) { transition-delay: 90ms; }
+.js .proof-strip > div:nth-child(3),
+.js .about-process li:nth-child(3),
+.js .team-member:nth-child(3) { transition-delay: 180ms; }
+.js .proof-strip > div:nth-child(4),
+.js .team-member:nth-child(4) { transition-delay: 270ms; }
+.js .team-member:nth-child(5) { transition-delay: 360ms; }
+
+@media (max-width: 760px) {
+  .marquee { margin-top: 28px; padding-block: 14px; }
+  .marquee-track { animation-duration: 22s; }
+  .marquee-track span { font-size: 9px; }
+  .marquee-track span::after { margin-inline: 22px; }
+  .contact-mark { right: -45px; width: 230px; opacity: .028; }
+  .contact h2::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+  .hero-visual::before,
+  .hero-visual::after,
+  .hero-visual-ring { animation: none; }
+  .js .section-heading,
+  .js .portfolio-heading > p,
+  .js .service-card,
+  .js .project-card,
+  .js .proof-strip > div,
+  .js .about-lead,
+  .js .about-process li,
+  .js .team-heading > p,
+  .js .team-member,
+  .js .contact > :not(.contact-mark) { opacity: 1; transform: none; transition: none; }
+}
+
 /* Portfolio v3 — every project has equal visual weight */
 .portfolio-grid {
   display: grid;
