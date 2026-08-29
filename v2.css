@@ -1055,3 +1055,97 @@ html, body { max-width: 100%; overflow-x: clip; }
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Mobile refinement — quieter scale, cleaner rhythm */
+@media (max-width: 760px) {
+  .hero,
+  #services,
+  #work,
+  .about { width: calc(100% - 20px); }
+
+  .hero {
+    min-height: 600px;
+    padding: 26px 20px 20px;
+    border-radius: 20px;
+  }
+  .hero h1 {
+    max-width: 7.6em;
+    margin-top: 66px;
+    font-size: clamp(39px, 11vw, 46px);
+    line-height: .95;
+  }
+  .hero-bottom { gap: 15px; }
+  .hero-bottom > p { font-size: 13.5px; }
+  .hero-proof { padding-block: 11px; font-size: 10.5px; }
+  .hero .button { min-height: 46px; font-size: 13px; }
+
+  #services { padding-top: 78px; padding-bottom: 58px; }
+  #services .section-heading { margin-bottom: 38px; }
+  .service-card-active { min-height: 330px; padding: 24px 21px; }
+  .service-card-muted { min-height: 158px; margin-left: 9%; padding: 20px; }
+  .service-card h3 { max-width: 9.7em; font-size: clamp(30px, 8.2vw, 37px); line-height: .99; }
+  .service-card-muted h3 { max-width: 11em; font-size: 22px; }
+  .service-card .card-label,
+  .service-card .card-footer { font-size: 11px; }
+
+  #work { padding: 58px 18px 62px; border-radius: 20px; }
+  .portfolio-heading { margin-bottom: 36px; }
+  .portfolio-heading .section-heading { margin-bottom: 32px; }
+  .portfolio-heading > p {
+    max-width: 11em;
+    font-size: clamp(30px, 8.6vw, 36px);
+    line-height: 1;
+    letter-spacing: -.05em;
+  }
+  #work .project-card { min-height: 228px; border-radius: 14px; }
+  #work .project-card .project-visual,
+  #work .project-card-featured .project-visual,
+  #work .project-card-compact > .project-logo { height: 90px; min-height: 90px; padding: 25px; }
+  #work .project-card .project-visual img,
+  #work .project-card-featured .project-visual img { width: 44px; height: 44px; }
+  #work .project-card .project-content,
+  #work .project-card:nth-child(2n) .project-content,
+  #work .project-card-featured .project-content,
+  #work .project-card-compact .project-content { min-height: 136px; padding: 12px; }
+  #work .project-card h3,
+  #work .project-card-featured h3,
+  #work .project-card-compact h3 { min-height: 34px; font-size: 16px; line-height: 1.06; }
+  #work .project-category { font-size: 8px; line-height: 1.35; }
+  #work .project-card::after { font-size: 7.5px; }
+  #work .portfolio-archive summary { min-height: 54px; }
+  #work .proof-strip { margin-top: 54px; }
+  .proof-strip > div { min-height: 106px; padding: 17px 14px; }
+  .proof-strip strong { font-size: 24px; line-height: 1.02; }
+  .proof-strip span { max-width: 12em; font-size: 11px; }
+
+  .about { min-height: auto; padding: 50px 20px 52px; border-radius: 20px; }
+  .about-layout { margin-top: 36px; }
+  .about .about-lead { max-width: 11em; font-size: clamp(28px, 7.8vw, 33px); line-height: 1.04; }
+  .about-process { margin-top: 38px; }
+  .about-process li { padding: 18px 0; }
+  .about-process strong { font-size: 17px; }
+  .about-process p { font-size: 12.5px; line-height: 1.48; }
+
+  .team {
+    width: calc(100% - 28px);
+    padding-top: 78px;
+    padding-bottom: 24px;
+  }
+  .team-heading { margin-bottom: 34px; }
+  .team-heading .section-heading { margin-bottom: 30px; }
+  .team-heading > p { max-width: 12em; font-size: clamp(29px, 8.3vw, 35px); line-height: 1; }
+  .team-member { min-height: 88px; padding-block: 14px; }
+  .team-member h3 { font-size: clamp(19px, 5.3vw, 21px); }
+
+  .contact {
+    width: calc(100% - 28px);
+    padding-top: 50px;
+    padding-bottom: 58px;
+  }
+  .contact h2 { margin-top: 42px; font-size: clamp(48px, 14vw, 60px); line-height: .9; }
+  .contact-copy { max-width: 31em; font-size: 14px; }
+
+  .footer-inner { width: calc(100% - 28px); }
+  .footer-links { gap: 14px; }
+  .footer-links a { font-size: 11px; white-space: nowrap; }
+}
