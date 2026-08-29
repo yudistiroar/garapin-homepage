@@ -6,6 +6,7 @@
     <meta name="description" content="Garapin adalah studio komunikasi digital yang membantu bisnis dan personal brand menyampaikan ide dengan lebih jelas." />
     <meta name="theme-color" content="#ffffff" />
     <meta name="application-name" content="Garapin" />
+    <meta name="garapin-version" content="2" />
     <meta name="apple-mobile-web-app-title" content="Garapin" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="id_ID" />
@@ -31,6 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="v2.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
@@ -42,6 +44,7 @@
         <div class="nav-links">
           <a href="#services">Layanan</a>
           <a href="#about">Tentang</a>
+          <a href="#team">Tim</a>
           <a href="#contact">Kontak</a>
         </div>
       </nav>
@@ -50,18 +53,18 @@
     <main id="main-content">
       <span id="top" aria-hidden="true"></span>
       <section class="hero container" aria-labelledby="hero-title">
-        <p class="eyebrow">GARAPIN</p>
-        <h1 id="hero-title">Membantu ide<br />tersampaikan lebih jelas.</h1>
+        <p class="eyebrow">STUDIO KOMUNIKASI DIGITAL</p>
+        <h1 id="hero-title"><span>Ide yang bagus perlu</span><span>disampaikan dengan jelas.</span></h1>
         <div class="hero-visual" aria-hidden="true">
           <span class="hero-visual-ring">
             <img src="/brand-assets/mark/mark-black.svg" alt="" width="78" height="74" />
           </span>
         </div>
         <div class="hero-bottom">
-          <p>Studio komunikasi digital<br />untuk bisnis dan personal brand.</p>
+          <p>Kami membantu bisnis dan personal brand mengubah ide menjadi komunikasi digital yang jelas, rapi, dan relevan.</p>
           <div class="button-group">
             <a class="button button-primary" href="https://wa.me/6285128011920" target="_blank" rel="noreferrer">Konsultasi di WhatsApp</a>
-            <a class="button button-secondary" href="#work">Lihat Hasil Kami</a>
+            <a class="button button-secondary" href="#work">Lihat Karya Kami</a>
           </div>
         </div>
       </section>
@@ -74,7 +77,7 @@
           <a class="service-card service-card-active" href="https://video.garapin.id" aria-label="Buka Garapin Editing">
             <div>
               <p class="card-label">GARAPIN EDITING</p>
-              <h3>Membantu pesan dalam video<br />tersampaikan lebih jelas.</h3>
+              <h3>Video yang lebih rapi, dengan pesan yang lebih mudah dipahami.</h3>
             </div>
             <div class="card-footer">
               <span>Tersedia</span>
@@ -84,7 +87,7 @@
           <article class="service-card service-card-muted">
             <div>
               <p class="card-label">GARAPIN BRANDING</p>
-              <h3>Sedang disiapkan...</h3>
+              <h3>Layanan branding sedang kami siapkan.</h3>
             </div>
             <div class="card-footer">
               <span>Segera Hadir</span>
@@ -100,7 +103,7 @@
           </div>
           <p>Beberapa contoh hasil kerja kami untuk bisnis dan personal brand.</p>
         </div>
-        <div class="portfolio-featured">
+        <div class="portfolio-grid" aria-label="Daftar project">
           <a class="project-card project-card-featured" href="https://www.instagram.com/gobindvashdev/" target="_blank" rel="noreferrer" aria-label="Lihat project Gobind Vashdev di Instagram">
             <div class="project-visual">
               <img src="/assets/portfolio/gobind-vashdev.jpg" alt="Foto Gobind Vashdev" width="100" height="100" />
@@ -145,8 +148,6 @@
               <span class="project-link">Lihat Project <span aria-hidden="true">↗</span></span>
             </div>
           </a>
-        </div>
-        <div class="portfolio-more" aria-label="Project lainnya">
           <a class="project-card project-card-compact" href="https://www.instagram.com/balibetterbreathing/" target="_blank" rel="noreferrer" aria-label="Lihat project Bali Better Breathing di Instagram">
             <img class="project-logo" src="/assets/portfolio/bali-better-breathing.jpg" alt="Logo Bali Better Breathing" width="100" height="100" loading="lazy" />
             <div class="project-content">
@@ -217,11 +218,52 @@
         <div class="section-heading">
           <h2 id="about-title">Tentang</h2>
         </div>
-        <p>Garapin adalah studio komunikasi digital yang membantu bisnis dan personal brand menyampaikan ide dengan lebih jelas melalui konten, desain, dan teknologi.</p>
+        <p>Garapin adalah studio komunikasi digital yang membantu bisnis dan personal brand mengubah ide menjadi komunikasi yang jelas melalui konten, desain, dan teknologi.</p>
+      </section>
+
+      <section class="section team container" id="team" aria-labelledby="team-title">
+        <div class="team-heading">
+          <div class="section-heading">
+            <h2 id="team-title">Tim Kami</h2>
+          </div>
+          <p>Orang-orang yang mengubah ide menjadi karya bersama Garapin.</p>
+        </div>
+        <div class="team-list">
+          <a class="team-member" href="https://www.instagram.com/yudistiroar/" target="_blank" rel="noreferrer" aria-label="Instagram Yudistira AR">
+            <span class="team-index">01</span>
+            <h3>Yudistira AR</h3>
+            <p>Project Manager</p>
+            <span class="team-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="team-member" href="https://www.instagram.com/hariobbie/" target="_blank" rel="noreferrer" aria-label="Instagram Hari Obbie">
+            <span class="team-index">02</span>
+            <h3>Hari Obbie</h3>
+            <p>Project Manager</p>
+            <span class="team-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="team-member" href="https://www.instagram.com/zidanpara/" target="_blank" rel="noreferrer" aria-label="Instagram Zidan Paradise">
+            <span class="team-index">03</span>
+            <h3>Zidan Paradise</h3>
+            <p>Videographer &amp; Editor</p>
+            <span class="team-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="team-member" href="https://www.instagram.com/wahyugant/" target="_blank" rel="noreferrer" aria-label="Instagram Wahyu Nurdi Ansa">
+            <span class="team-index">04</span>
+            <h3>Wahyu Nurdi Ansa</h3>
+            <p>Developer</p>
+            <span class="team-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="team-member" href="https://www.instagram.com/ferologyy/" target="_blank" rel="noreferrer" aria-label="Instagram Fernanda A">
+            <span class="team-index">05</span>
+            <h3>Fernanda A</h3>
+            <p>Graphic Designer</p>
+            <span class="team-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
 
       <section class="contact container" id="contact" aria-labelledby="contact-title">
-        <p class="eyebrow">Sudah siap mulai?</p>
+        <p class="eyebrow">Punya ide untuk digarap?</p>
         <h2 id="contact-title">Mari kita garapin.</h2>
         <a class="button button-primary" href="https://wa.me/6285128011920" target="_blank" rel="noreferrer">Konsultasi di WhatsApp</a>
       </section>
