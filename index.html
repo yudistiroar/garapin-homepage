@@ -396,6 +396,9 @@
             });
           }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
           revealItems.forEach((item) => observer.observe(item));
+          window.setTimeout(() => {
+            revealItems.forEach((item) => item.classList.add('is-visible'));
+          }, 1800);
         } else {
           revealItems.forEach((item) => item.classList.add('is-visible'));
         }

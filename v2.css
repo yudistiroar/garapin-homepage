@@ -417,7 +417,26 @@ body { background: var(--paper); }
   transform: translateY(22px);
   transition: opacity 650ms ease, transform 700ms var(--ease-editorial);
 }
-.js .is-visible { opacity: 1; transform: translateY(0); }
+.js .section-heading.is-visible,
+.js .portfolio-heading > p.is-visible,
+.js .service-card.is-visible,
+.js .project-card.is-visible,
+.js .proof-strip > div.is-visible,
+.js .about-lead.is-visible,
+.js .about-process li.is-visible,
+.js .team-heading > p.is-visible,
+.js .team-member.is-visible,
+.js .contact > :not(.contact-mark).is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.proof-strip > div.is-visible strong {
+  animation: proof-settle 620ms var(--ease-editorial) both;
+}
+@keyframes proof-settle {
+  from { opacity: .25; transform: translateY(8px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
 .js .services-grid .service-card:nth-child(2),
 .js .proof-strip > div:nth-child(2),
 .js .about-process li:nth-child(2),

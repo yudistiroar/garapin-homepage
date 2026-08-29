@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" crossorigin href="/assets/index-B26QZea9.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BdILZega.css">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
@@ -395,6 +395,9 @@
             });
           }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
           revealItems.forEach((item) => observer.observe(item));
+          window.setTimeout(() => {
+            revealItems.forEach((item) => item.classList.add('is-visible'));
+          }, 1800);
         } else {
           revealItems.forEach((item) => item.classList.add('is-visible'));
         }
