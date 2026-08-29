@@ -710,3 +710,131 @@ html, body { max-width: 100%; overflow-x: clip; }
   .about-process strong { margin: 0; font-size: 19px; }
   .about-process p { grid-column: 2; }
 }
+
+/* Portfolio — compact, sorted by current Instagram audience */
+#work {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+#work .portfolio-heading,
+#work .proof-strip { grid-column: 1 / -1; }
+#work .portfolio-grid,
+#work .portfolio-archive,
+#work .portfolio-grid-extra { display: contents; }
+#work .portfolio-archive summary { display: none; }
+#work .project-card {
+  position: relative;
+  min-width: 0;
+  min-height: 320px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  background: var(--paper);
+}
+#work .project-card:hover { padding: 0; transform: translateY(-4px); }
+#work .project-card::after {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  padding: 7px 9px;
+  border: 1px solid rgba(17,17,17,.12);
+  border-radius: 999px;
+  content: attr(data-followers) " followers";
+  color: var(--ink);
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(8px);
+  font-size: 10px;
+  font-weight: 650;
+}
+#work .project-card .project-visual,
+#work .project-card-featured .project-visual,
+#work .project-card-compact > .project-logo {
+  width: 100%;
+  height: 142px;
+  min-height: 142px;
+  margin: 0;
+  padding: 42px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  object-fit: contain;
+  background: var(--paper-warm);
+}
+#work .project-card .project-visual img,
+#work .project-card-featured .project-visual img { width: 66px; height: 66px; box-shadow: none; }
+#work .project-card .project-content,
+#work .project-card:nth-child(2n) .project-content,
+#work .project-card-featured .project-content,
+#work .project-card-compact .project-content {
+  width: 100%;
+  min-height: 176px;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#work .project-card h3,
+#work .project-card-featured h3,
+#work .project-card-compact h3 { margin: 10px 0 0; font-size: clamp(21px, 2.1vw, 29px); line-height: 1; }
+#work .project-card .project-description { display: none; }
+#work .project-card .project-link { margin-top: auto; padding-top: 18px; font-size: 12px; }
+#work .project-card[href*="gobindvashdev"] { order: 1; }
+#work .project-card[href*="buteykoindonesia"] { order: 2; }
+#work .project-card[href*="amstirdamcoffee"] { order: 3; }
+#work .project-card[href*="qasir.id"] { order: 4; }
+#work .project-card[href*="treplus.id"] { order: 5; }
+#work .project-card[href*="singingbowlindonesia"] { order: 6; }
+#work .project-card[href*="mier_patisserie"] { order: 7; }
+#work .project-card[href*="binakidsai"] { order: 8; }
+#work .project-card[href*="warungwareg_official"] { order: 9; }
+#work .project-card[href*="ssbr.trans"] { order: 10; }
+#work .project-card[href*="myslice_pizza"] { order: 11; }
+#work .project-card[href*="balibetterbreathing"] { order: 12; }
+#work .proof-strip { order: 20; }
+
+@media (max-width: 980px) {
+  #work { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  #work { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  #work .project-card { min-height: 270px; border-radius: 15px; }
+  #work .project-card .project-visual,
+  #work .project-card-featured .project-visual,
+  #work .project-card-compact > .project-logo { height: 112px; min-height: 112px; padding: 34px; }
+  #work .project-card .project-visual img,
+  #work .project-card-featured .project-visual img { width: 52px; height: 52px; }
+  #work .project-card .project-content,
+  #work .project-card:nth-child(2n) .project-content,
+  #work .project-card-featured .project-content,
+  #work .project-card-compact .project-content { min-height: 156px; padding: 15px; }
+  #work .project-card h3,
+  #work .project-card-featured h3,
+  #work .project-card-compact h3 { font-size: 20px; }
+  #work .project-card::after { top: 9px; right: 9px; padding: 5px 7px; font-size: 9px; }
+  #work .project-category { font-size: 9px; }
+}
+
+/* Keep every brand in one sortable grid */
+#work { display: block; }
+#work .portfolio-heading,
+#work .proof-strip { width: 100%; }
+#work .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+#work .portfolio-archive { display: none; }
+#work .proof-strip { margin-top: clamp(72px, 9vw, 120px); }
+@media (max-width: 980px) {
+  #work .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  #work .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+}
