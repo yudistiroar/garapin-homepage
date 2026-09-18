@@ -474,6 +474,43 @@ body { background: var(--paper); }
   .js .contact > :not(.contact-mark) { opacity: 1; transform: none; transition: none; }
 }
 
+/* Portfolio resilience for narrow windows, zoom, and tablet layouts */
+#work { container-type: inline-size; }
+#work .portfolio-grid,
+#work .portfolio-grid-extra {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+#work .project-card,
+#work .project-content,
+#work .project-card h3,
+#work .project-category,
+#work .project-link {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@container (max-width: 900px) {
+  #work .portfolio-heading {
+    display: block;
+    margin-bottom: 54px;
+  }
+  #work .portfolio-heading .section-heading { margin-bottom: 34px; }
+  #work .portfolio-heading > p {
+    width: 100%;
+    max-width: 720px;
+    margin-left: 0;
+    font-size: clamp(34px, 7.5cqi, 54px);
+    line-height: 1;
+  }
+}
+
+@media (max-width: 620px) {
+  #work .portfolio-grid,
+  #work .portfolio-grid-extra {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Portfolio v3 — every project has equal visual weight */
 .portfolio-grid {
   display: grid;
@@ -1344,4 +1381,34 @@ html, body { max-width: 100%; overflow-x: clip; }
   .footer-inner { width: calc(100% - 28px); }
   .footer-links { gap: 14px; }
   .footer-links a { font-size: 11px; white-space: nowrap; }
+}
+
+/* Final portfolio breakpoint guard */
+#work { container-type: inline-size; }
+#work .portfolio-grid,
+#work .portfolio-grid-extra {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+#work .project-card,
+#work .project-content,
+#work .project-card h3,
+#work .project-category,
+#work .project-link {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@container (max-width: 900px) {
+  #work .portfolio-heading { display: block; margin-bottom: 54px; }
+  #work .portfolio-heading .section-heading { margin-bottom: 34px; }
+  #work .portfolio-heading > p {
+    width: 100%;
+    max-width: 720px;
+    margin-left: 0;
+    font-size: clamp(34px, 7.5cqi, 54px);
+    line-height: 1;
+  }
+}
+@media (max-width: 620px) {
+  #work .portfolio-grid,
+  #work .portfolio-grid-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
