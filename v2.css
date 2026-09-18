@@ -1412,3 +1412,39 @@ html, body { max-width: 100%; overflow-x: clip; }
   #work .portfolio-grid,
   #work .portfolio-grid-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Reference layout: broad headline with three substantial cards */
+@media (min-width: 761px) {
+  #work .portfolio-heading {
+    display: block;
+    margin-bottom: clamp(76px, 9vw, 112px);
+  }
+  #work .portfolio-heading .section-heading { margin-bottom: 48px; }
+  #work .portfolio-heading > p {
+    width: 100%;
+    max-width: 820px;
+    margin: 0;
+    font-size: clamp(52px, 6.2vw, 78px);
+    line-height: .98;
+    letter-spacing: -.055em;
+  }
+  #work .portfolio-grid,
+  #work .portfolio-grid-extra {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  #work .project-card { min-height: 350px; }
+  #work .project-card .project-visual,
+  #work .project-card-featured .project-visual,
+  #work .project-card-compact > .project-logo {
+    height: 150px;
+    min-height: 150px;
+  }
+  #work .project-card .project-content,
+  #work .project-card:nth-child(2n) .project-content,
+  #work .project-card-featured .project-content,
+  #work .project-card-compact .project-content {
+    min-height: 198px;
+    padding: 22px;
+  }
+}
